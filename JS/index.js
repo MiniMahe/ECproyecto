@@ -9,7 +9,7 @@ let image = document.getElementById("boy");
 
 function myUpdate() {
     setInterval(() => {
-        if (image.scroll.match('leftrun.png')) {
+        if (image.src.match('leftrun.png')) {
             image.src = 'rightrun.png';
         } else {
             image.src = 'leftrun.png';
@@ -45,11 +45,11 @@ block.addEventListener('animationiteration', () => {
 
 setInterval(() => {
     let characterLeft = parseInt(window.getComputedStyle(character).getPropertyValue('left'));
-    let blockLeft = parseInt(window.getComputedStyle(character).getPropertyValue('left'));
-    let blockTop = parseInt(window.getComputedStyle(character).getPropertyValue('top'));
+    let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue('left'));
+    let blockTop = parseInt(window.getComputedStyle(block).getPropertyValue('top'));
     if (characterLeft == blockLeft && blockTop < 500 && blockTop > 95) {
         alert('Game over. Puntuación: ' + counter);
-        block.style.animation.none;
+        block.style.animation = 'none';
     }
 }, 1);
 
