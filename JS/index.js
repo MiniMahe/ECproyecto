@@ -38,12 +38,12 @@ let counter = 0;
 
 block.addEventListener('animationiteration', () => {
     let random = Math.floor(Math.random() * 3);
-    left - random * 100;
+    left = random * 100;
     block.style.left = left + 'px';
     counter++;
 })
 
-setInterval(() => {
+setInterval(function() {
     let characterLeft = parseInt(window.getComputedStyle(character).getPropertyValue('left'));
     let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue('left'));
     let blockTop = parseInt(window.getComputedStyle(block).getPropertyValue('top'));
