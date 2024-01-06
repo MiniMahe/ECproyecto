@@ -13,7 +13,7 @@ body {
     border: 1px solid black;
     margin: auto;
     box-sizing: border-box;
-    background-image: url('img/fondojuego.png');
+    background-image: url('../imgs/fondo.jpg');
 }
 
 #character {
