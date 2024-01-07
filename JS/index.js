@@ -48,10 +48,12 @@ setInterval(function() {
     let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue('left'));
     let blockTop = parseInt(window.getComputedStyle(block).getPropertyValue('top'));
     if (characterLeft == blockLeft && blockTop < 500 && blockTop > 165) {
-        alert('Game over. Puntuación: ' + counter);
         block.style.animation = 'none';
     }
 }, 1);
 
 document.getElementById('right').addEventListener('touchstart', moveRight);
 document.getElementById('left').addEventListener('touchstart', moveLeft);
+document.getElementById('resetButton').addEventListener('click', function() {
+    location.reload();
+});

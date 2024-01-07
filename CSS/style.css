@@ -16,6 +16,7 @@ body {
     margin: auto;
     box-sizing: border-box;
     background-image: url('../imgs/fondo.png');
+    border-radius: 25px;
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
