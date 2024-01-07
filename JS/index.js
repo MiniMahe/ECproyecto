@@ -41,6 +41,7 @@ block.addEventListener('animationiteration', () => {
     left = random * 100;
     block.style.left = left + 'px';
     counter++;
+    document.getElementById('puntos').innerHTML = counter;
 })
 
 setInterval(function() {

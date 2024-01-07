@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap'); /*font-family: 'Bungee Spice', sans-serif;*/
+
 * {
     margin: 0;
     padding: 0;
@@ -76,4 +78,9 @@ body {
 
 #right {
     left: 50%;
+}
+
+#puntuacion{
+    font-family: 'Bungee Spice', sans-serif;
+    font-size: 30px;
 }
