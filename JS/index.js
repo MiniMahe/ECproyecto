@@ -47,7 +47,7 @@ setInterval(function() {
     let characterLeft = parseInt(window.getComputedStyle(character).getPropertyValue('left'));
     let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue('left'));
     let blockTop = parseInt(window.getComputedStyle(block).getPropertyValue('top'));
-    if (characterLeft == blockLeft && blockTop < 500 && blockTop > 95) {
+    if (characterLeft == blockLeft && blockTop < 500 && blockTop > 165) {
         alert('Game over. Puntuación: ' + counter);
         block.style.animation = 'none';
     }
