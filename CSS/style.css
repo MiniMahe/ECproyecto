@@ -22,6 +22,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
+    margin-top: 5%;
 }
 
 #character {
@@ -83,4 +84,28 @@ body {
 #puntuacion{
     font-family: 'Bungee Spice', sans-serif;
     font-size: 30px;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+#resetButton{
+    background-color: aliceblue;
+    height: 30px;
+    width: 120px;
+    font-family: 'Bungee Spice', sans-serif;
+    border: 1px solid rgb(156, 83, 24);
+    border-radius: 5px;
+    margin-bottom: 100%;
+    visibility: hidden;
+}
+
+#resetButton:hover{
+    background-color: rgb(136, 214, 110);
+    border: 1px solid rgb(136, 214, 110);
+}
+
+#punt-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

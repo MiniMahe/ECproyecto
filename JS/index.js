@@ -6,6 +6,7 @@ document.addEventListener("keydown", event => {
 
 let character = document.getElementById("character");
 let image = document.getElementById("boy");
+let button = document.getElementById("resetButton");
 
 function myUpdate() {
     setInterval(() => {
@@ -50,11 +51,12 @@ setInterval(function() {
     let blockTop = parseInt(window.getComputedStyle(block).getPropertyValue('top'));
     if (characterLeft == blockLeft && blockTop < 500 && blockTop > 165) {
         block.style.animation = 'none';
+        button.style.visibility = 'visible';
     }
 }, 1);
 
 document.getElementById('right').addEventListener('touchstart', moveRight);
 document.getElementById('left').addEventListener('touchstart', moveLeft);
-document.getElementById('resetButton').addEventListener('click', function() {
+button.addEventListener('click', function() { //Reload the game
     location.reload();
 });
