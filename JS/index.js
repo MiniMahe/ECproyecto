@@ -37,6 +37,7 @@ function moveRight() {
 
 let block = document.getElementById('block');
 let counter = 0;
+let slide = 1.5;
 
 block.addEventListener('animationiteration', () => {
     let random = Math.floor(Math.random() * 3);
@@ -44,12 +45,22 @@ block.addEventListener('animationiteration', () => {
     block.style.left = left + 'px';
     counter++;
     document.getElementById('puntos').innerHTML = counter;
+
+    if (counter % 10 === 0 && counter !== 0) {
+        slide -= counter / 100;
+        setInterval(function () {
+            block.style.animation = 'slide ' + slide + 's infinite linear';
+        }, 1);
+
+    }
+
 })
 
-setInterval(function() {
+setInterval(function () {
     let characterLeft = parseInt(window.getComputedStyle(character).getPropertyValue('left'));
     let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue('left'));
     let blockTop = parseInt(window.getComputedStyle(block).getPropertyValue('top'));
+
     if (characterLeft == blockLeft && blockTop < 500 && blockTop > 165) {
         block.style.animation = 'none';
         button.style.visibility = 'visible';
@@ -60,6 +71,6 @@ setInterval(function() {
 
 document.getElementById('right').addEventListener('touchstart', moveRight);
 document.getElementById('left').addEventListener('touchstart', moveLeft);
-button.addEventListener('click', function() { //Reload the game
+button.addEventListener('click', function () { //Reload the game
     location.reload();
 });
