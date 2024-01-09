@@ -120,3 +120,18 @@ body {
     text-shadow: -3px 4px 12px rgba(255,221,195,0.97);
     font-family: 'Bungee Spice', sans-serif;
 }
+/* IDEA para colocar obstáculo... hay que cambiar igualmente la posicion del character and other things
+#xd img{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    width: 300px;
+}
+
+#xd{
+    position: relative;
+    bottom: 22%;
+    left: 15%;
+}
