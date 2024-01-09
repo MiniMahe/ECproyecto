@@ -7,6 +7,7 @@ document.addEventListener("keydown", event => {
 let character = document.getElementById("character");
 let image = document.getElementById("boy");
 let button = document.getElementById("resetButton");
+let gameOver = document.getElementById("gameOver");
 
 function myUpdate() {
     setInterval(() => {
@@ -52,6 +53,8 @@ setInterval(function() {
     if (characterLeft == blockLeft && blockTop < 500 && blockTop > 165) {
         block.style.animation = 'none';
         button.style.visibility = 'visible';
+        character.style.visibility = 'hidden';
+        gameOver.style.visibility = 'visible';
     }
 }, 1);
 

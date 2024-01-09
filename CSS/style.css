@@ -29,7 +29,7 @@ body {
     width: 100px;
     height: 100px;
     position: relative;
-    top: 300px;
+    top: 263px;
     left: 0px;
 }
 
@@ -108,4 +108,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#gameOver{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    top: 45%;
+    text-shadow: -3px 4px 12px rgba(255,221,195,0.97);
+    font-family: 'Bungee Spice', sans-serif;
 }
