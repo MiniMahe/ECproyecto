@@ -38,6 +38,7 @@ function moveRight() {
 let block = document.getElementById('block');
 let counter = 0;
 let slide = 1.5;
+let lvl = 1;
 
 block.addEventListener('animationiteration', () => {
     let random = Math.floor(Math.random() * 3);
@@ -49,6 +50,11 @@ block.addEventListener('animationiteration', () => {
     console.log(slide);
     block.style.animation = 'slide ' + slide + 's infinite';
     block.style.animationTimingFunction = 'linear'
+
+    if(counter % 10 === 0){
+        lvl++;
+        document.getElementById('lvl').innerHTML = lvl;
+    }
     
 })
 
@@ -58,7 +64,7 @@ setInterval(function () {
     let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue('left'));
     let blockTop = parseInt(window.getComputedStyle(block).getPropertyValue('top'));
 
-    if (characterLeft == blockLeft && blockTop < 500 && blockTop > 165) {
+    if (characterLeft == blockLeft && blockTop > 164) {
         block.style.animation = 'none';
         button.style.visibility = 'visible';
         character.style.visibility = 'hidden';

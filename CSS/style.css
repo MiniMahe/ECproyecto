@@ -9,6 +9,7 @@ body {
     display: grid;
     place-items: center;
     min-height: 100vh;
+    background-color: antiquewhite;
 }
 
 #game {
@@ -30,7 +31,7 @@ body {
     height: 100px;
     position: relative;
     top: 300px;
-    left: 0px;
+    left: 100px;
 }
 
 #boy {
@@ -93,6 +94,12 @@ body {
     margin-top: 5%;
 }
 
+#nivel{
+    font-family: 'Bungee Spice', sans-serif;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
 #resetButton{
     background-color: aliceblue;
     height: 30px;
@@ -102,6 +109,8 @@ body {
     border-radius: 5px;
     
     visibility: hidden;
+
+    margin-bottom: 100px;
 }
 
 #resetButton:hover{
@@ -113,7 +122,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 50px;
 }
+
 
 #gameOver, #win{
     position: relative;
