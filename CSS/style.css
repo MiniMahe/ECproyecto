@@ -55,6 +55,11 @@ body {
     animation: slide 1.5s infinite linear;
 }
 
+#block > img{
+    position: absolute;
+    left: 10px;
+}
+
 .train {
     width: 100px;
     height: 100px;
