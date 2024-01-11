@@ -153,7 +153,7 @@ body {
     position: absolute;
     z-index: 1;
     margin-left: 4%;
-    top: -15%;
+    top: -12%;
     animation-name: cloud2;
     animation-duration: 15s;
     animation-iteration-count: infinite;
