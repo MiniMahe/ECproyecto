@@ -1,7 +1,8 @@
-document.addEventListener("keydown", event => {
-    if (event.key === "ArrowLeft" || event.key === "A" || event.key === "a") { moveLeft(); }
-    if (event.key === "ArrowRight" || event.key === "D" || event.key == "d") { moveRight(); }
-});
+//variables
+let block = document.getElementById('block');
+let counter = 0;
+let slide = 1.5;
+let lvl = 1;
 
 let character = document.getElementById("character");
 let image = document.getElementById("boy");
@@ -10,6 +11,12 @@ let gameOver = document.getElementById("gameOver");
 let win = document.getElementById("win");
 let cloud = document.getElementById('cloud1');
 let cloud2 = document.getElementById('cloud2');
+
+//detectar tecal
+document.addEventListener("keydown", event => {
+    if (event.key === "ArrowLeft" || event.key === "A" || event.key === "a") { moveLeft(); }
+    if (event.key === "ArrowRight" || event.key === "D" || event.key == "d") { moveRight(); }
+});
 
 function myUpdate() {
     setInterval(() => {
@@ -37,10 +44,7 @@ function moveRight() {
     }
 }
 
-let block = document.getElementById('block');
-let counter = 0;
-let slide = 1.5;
-let lvl = 1;
+
 
 block.addEventListener('animationiteration', () => {
     let random = Math.floor(Math.random() * 3);
@@ -72,7 +76,7 @@ setInterval(function () {
         character.style.visibility = 'hidden';
         gameOver.style.display = 'flex';
     }
-    else if(counter == 25){
+    else if(counter == 1){
         cloud.style.display = 'flex';
         cloud2.style.display = 'flex';
     }

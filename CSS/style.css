@@ -24,6 +24,8 @@ body {
     background-repeat: no-repeat;
     overflow: hidden;
     margin-top: 5%;
+
+    position: relative;
 }
 
 #character {
@@ -157,6 +159,7 @@ body {
     animation-name: cloud2;
     animation-duration: 8s;
     animation-iteration-count: infinite;
+
 }
 
 .cloud {
