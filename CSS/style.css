@@ -105,7 +105,6 @@ body {
     font-family: 'Bungee Spice', sans-serif;
     border: 1px solid rgb(156, 83, 24);
     border-radius: 5px;
-
     margin-bottom: 100px;
     display: none;
 }
@@ -121,7 +120,6 @@ body {
     align-items: center;
     gap: 50px;
 }
-
 
 #gameOver, #win{
     position: relative;

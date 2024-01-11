@@ -11,6 +11,7 @@ let gameOver = document.getElementById("gameOver");
 let win = document.getElementById("win");
 let cloud = document.getElementById('cloud1');
 let cloud2 = document.getElementById('cloud2');
+let game = document.getElementById('game');
 
 //detectar tecal
 document.addEventListener("keydown", event => {
@@ -77,8 +78,9 @@ setInterval(function () {
         gameOver.style.display = 'flex';
     }
     else if(counter == 1){
-        cloud.style.display = 'flex';
-        cloud2.style.display = 'flex';
+        cloud.style.display = 'block';
+        cloud2.style.display = 'block';
+        game.style.background = "url('../imgs/first.png')";
     }
     else if(counter == 50) {
         block.style.animation = 'none';
