@@ -53,7 +53,6 @@ block.addEventListener('animationiteration', () => {
 
     //aumentar velocidad del tren
     slide -= 0.01;
-    console.log(slide);
     block.style.animation = 'slide ' + slide + 's infinite';
     block.style.animationTimingFunction = 'linear'
 
