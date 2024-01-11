@@ -69,8 +69,6 @@ setInterval(function () {
     else if(counter == 25){
         cloud.style.display = 'flex';
         cloud2.style.display = 'flex';
-        gameOver.style.top = '-38%';
-
     }
     else if(counter == 50) {
         block.style.animation = 'none';
