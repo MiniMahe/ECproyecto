@@ -138,10 +138,10 @@ body {
 #cloud1{
     position: absolute;
     z-index: 2;
-    margin-right: 2%;
-    top: 2%;
+    margin-right: 25%;
+    top: -15%;
     animation-name: cloud;
-    animation-duration: 7s;
+    animation-duration: 25s;
     animation-iteration-count: infinite;
 }
 
@@ -152,12 +152,11 @@ body {
 #cloud2{
     position: absolute;
     z-index: 1;
-    top: 1%;
     margin-left: 4%;
+    top: -15%;
     animation-name: cloud2;
-    animation-duration: 8s;
+    animation-duration: 15s;
     animation-iteration-count: infinite;
-
 }
 
 .cloud {
@@ -165,18 +164,18 @@ body {
 }
 @keyframes cloud {
     0% {
-        transform: translatex(0);
+        transform: translatex(20px);
       }
-      50% {
-        transform: translatex(-85px);
+      70% {
+        transform: translatex(-50px);
       }
   }
 
   @keyframes cloud2{
     0% {
-        transform: translatex(20px);
+        transform: translatex(80px);
       }
       50% {
-        transform: translatex(-100px);
+        transform: translatex(-120px);
       }
   }
