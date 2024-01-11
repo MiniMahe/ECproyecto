@@ -77,10 +77,9 @@ setInterval(function () {
         character.style.visibility = 'hidden';
         gameOver.style.display = 'flex';
     }
-    else if(counter == 25){
+    else if(counter == 30){
         cloud.style.display = 'block';
         cloud2.style.display = 'block';
-        game.style.background = "url('../imgs/first.png')";
     }
     else if(counter == 50) {
         block.style.animation = 'none';
