@@ -56,6 +56,11 @@ body {
     animation: slide 1.5s infinite linear;
 }
 
+#block > img{
+    position: absolute;
+    left: 15px;
+}
+
 @keyframes slide {
     0% {
         top: -500px;
