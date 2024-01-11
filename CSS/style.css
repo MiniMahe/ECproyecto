@@ -55,16 +55,6 @@ body {
     animation: slide 1.5s infinite linear;
 }
 
-#block > img{
-    position: absolute;
-    left: 10px;
-}
-
-.train {
-    width: 100px;
-    height: 100px;
-}
-
 @keyframes slide {
     0% {
         top: -500px;
@@ -94,14 +84,14 @@ body {
 }
 
 #resetButton{
+    position: relative;
     background-color: aliceblue;
     height: 30px;
     width: 120px;
     font-family: 'Bungee Spice', sans-serif;
     border: 1px solid rgb(156, 83, 24);
     border-radius: 5px;
-    
-    visibility: hidden;
+    display: none;
 }
 
 #resetButton:hover{
@@ -124,18 +114,52 @@ body {
     text-shadow: -3px 4px 12px rgba(255,221,195,0.97);
     font-family: 'Bungee Spice', sans-serif;
 }
-/* IDEA para colocar obstáculo... hay que cambiar igualmente la posicion del character and other things
-#xd img{
-    display: flex;
-    
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    width: 300px;
+/* IDEA para colocar obstáculo... hay que cambiar igualmente la posicion del character and other things */
+#cloud1 img{
+    width: 250px;
 }
 
-#xd{
-    position: relative;
-    bottom: 22%;
-    left: 15%;
+#cloud1{
+    position: absolute;
+    z-index: 2;
+    margin-right: 2%;
+    top: 2%;
+    animation-name: cloud;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
 }
+
+#cloud2 img{
+    width: 250px;
+}
+
+#cloud2{
+    position: absolute;
+    z-index: 1;
+    top: 1%;
+    margin-left: 4%;
+    animation-name: cloud2;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+.cloud {
+    display: none;
+}
+@keyframes cloud {
+    0% {
+        transform: translatex(0);
+      }
+      50% {
+        transform: translatex(-85px);
+      }
+  }
+
+  @keyframes cloud2{
+    0% {
+        transform: translatex(20px);
+      }
+      50% {
+        transform: translatex(-100px);
+      }
+  }

@@ -8,6 +8,8 @@ let image = document.getElementById("boy");
 let button = document.getElementById("resetButton");
 let gameOver = document.getElementById("gameOver");
 let win = document.getElementById("win");
+let cloud = document.getElementById('cloud1');
+let cloud2 = document.getElementById('cloud2');
 
 function myUpdate() {
     setInterval(() => {
@@ -60,13 +62,19 @@ setInterval(function () {
 
     if (characterLeft == blockLeft && blockTop < 500 && blockTop > 165) {
         block.style.animation = 'none';
-        button.style.visibility = 'visible';
+        button.style.display = 'block';
         character.style.visibility = 'hidden';
         gameOver.style.display = 'flex';
     }
+    else if(counter == 1){
+        cloud.style.display = 'flex';
+        cloud2.style.display = 'flex';
+        gameOver.style.top = '-38%';
+
+    }
     else if(counter == 50) {
         block.style.animation = 'none';
-        button.style.visibility = 'visible';
+        button.style.display = 'block';
         character.style.visibility = 'hidden';
         win.style.display = 'flex';
     }
