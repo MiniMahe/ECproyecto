@@ -1,8 +1,7 @@
 document.addEventListener("keydown", event => {
-    if (event.key === "ArrowLeft") { moveLeft(); }
-    if (event.key === "ArrowRight") { moveRight(); }
-
-})
+    if (event.key === "ArrowLeft" || event.key === "A" || event.key === "a") { moveLeft(); }
+    if (event.key === "ArrowRight" || event.key === "D" || event.key == "d") { moveRight(); }
+});
 
 let character = document.getElementById("character");
 let image = document.getElementById("boy");
