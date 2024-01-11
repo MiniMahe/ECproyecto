@@ -7,6 +7,7 @@ let character = document.getElementById("character");
 let image = document.getElementById("boy");
 let button = document.getElementById("resetButton");
 let gameOver = document.getElementById("gameOver");
+let win = document.getElementById("win");
 
 function myUpdate() {
     setInterval(() => {
@@ -48,6 +49,7 @@ block.addEventListener('animationiteration', () => {
     console.log(slide);
     block.style.animation = 'slide ' + slide + 's infinite';
     block.style.animationTimingFunction = 'linear'
+    
 })
 
 
@@ -60,7 +62,13 @@ setInterval(function () {
         block.style.animation = 'none';
         button.style.visibility = 'visible';
         character.style.visibility = 'hidden';
-        gameOver.style.visibility = 'visible';
+        gameOver.style.display = 'flex';
+    }
+    else if(counter == 50) {
+        block.style.animation = 'none';
+        button.style.visibility = 'visible';
+        character.style.visibility = 'hidden';
+        win.style.display = 'flex';
     }
 }, 1);
 
